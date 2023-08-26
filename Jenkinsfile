@@ -1,9 +1,10 @@
 pipeline{
-    agent any
+    agent {dockerfile true}
     stages{
         stage('Build'){
             steps{
                 echo 'Probando 1,2'
+                sh 'python --version'
             }
         }
         stage('Test'){
